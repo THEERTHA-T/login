@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>exercise 8</title>
+  <style media="screen">
+  th
+  {
+    font-size: 20px;
+    text-align: left;
+  }
+  input[type=text], input[type=password],input[type=email]
+  {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  #btn
+  {
+    font-size: 95%;
+    border: none;
+    background-color:green;
+    color:white;
+    width:100px;
+    height:35px
+  }
+  h1
+  {
+    color: white;
+    background-color: black;
+    margin-left: 37%;
+    margin-right: 36%;
+  }
+  </style>
+</head>
+<body>
+  <br><br>
+  <form name="form1" action="" method="post" onsubmit="return sub()">
+    <h1 align="center"><u>LOGIN</u></h1>
+    <br>
+    <table align="center" width="25%">
+      <tr>
+        <th>User Name </th>
+        <td><input type="text" name="fn"></td>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <td><input type="password" name="pswd"></td>
+      </tr>
+     
+    
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </tr>
+    <tr>
+      <br>
+      <td> <input type="button" value="SIGN UP" onclick="window.location.href='register.html'" id="btn" style="background-color:red;"></td>
+	<td align="right"> <input type="button" value="LOG IN" onclick="window.location.href='login.html'" id="btn" style="background-color:green;"></td>
+    </tr>
+  </table>
+</form>
+
+<script type="text/javascript">
+function sub()
+{
+  fn=document.form1.fn.value;
+  pswd=document.form1.pswd.value;
+ if(fn==""||pswd=="")
+  {
+    alert("Mandatory Fields Missing..!");
+    return false;
+  }
+ else
+  {
+    alert("submitted successfully..!");
+  }
+}
+</body>
+</html>
